@@ -39,11 +39,18 @@ const AddExpenseModal = ({ isOpen, onRequestClose }) => {
       <h2>Add Expense</h2>
       <form onSubmit={handleSubmit}>
         <input name="title" value={form.title} onChange={handleChange} placeholder="Title" required />
-        <input name="price" type="number" value={form.price} onChange={handleChange} placeholder="Amount" required />
+        <input
+          name="price"
+          type="number"
+          value={form.price}
+          onChange={handleChange}
+          placeholder="Amount"
+          required
+        />
         <select name="category" value={form.category} onChange={handleChange} required>
           <option value="">Select Category</option>
           <option value="Food">Food</option>
-          <option value="Transport">Transport</option>
+          <option value="Travel">Travel</option>
           <option value="Entertainment">Entertainment</option>
         </select>
         <input name="date" type="date" value={form.date} onChange={handleChange} required />
