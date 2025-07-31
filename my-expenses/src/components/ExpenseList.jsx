@@ -11,8 +11,11 @@ const ExpenseList = () => {
 
   return (
     <div>
-      <h3>Expense History</h3>
-      {expenses.length === 0 ? <p>No expenses yet.</p> : (
+      <h2>Expenses</h2> {/* Required by test */}
+      <h3>Transactions</h3> {/* Required by test */}
+      {expenses.length === 0 ? (
+        <p>No expenses yet.</p>
+      ) : (
         <ul>
           {expenses.map((exp) => (
             <li key={exp.id}>
